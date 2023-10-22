@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 const StateContext = createContext();
 
 const initialState = {
@@ -10,9 +10,6 @@ const initialState = {
 
 export const ContextProvider = ({ children }) => {
     const [activeMenu, setactiveMenu] = useState(true);
-
-
-
     return (
         <StateContext.Provider
             value={{ activeMenu, 
@@ -22,5 +19,4 @@ export const ContextProvider = ({ children }) => {
     )
 }
 
-export const useStateContext =  () => useContext
-(StateContext)
+export const useStateContext =  () => useContext(StateContext)
