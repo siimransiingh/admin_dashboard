@@ -6,7 +6,7 @@ import { Header } from '../components';
 const Employees = () => {
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 ng-white rounded-3xl'>
-    <Header title='em' category='Page'/>
+    <Header title='employees' category='Page'/>
     <GridComponent
     id='gridcomp'
     dataSource={employeesData}
