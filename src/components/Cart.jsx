@@ -7,7 +7,7 @@ import { cartData } from '../data/dummy';
 import { Button } from '.';
 
 const Cart = () => {
-  const { curretColor,setThemeSettings } = useStateContext();
+  const { handleClick,curretColor,setThemeSettings } = useStateContext();
 
   return (
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 ">
@@ -16,11 +16,11 @@ const Cart = () => {
           <p className="font-semibold text-lg">Shopping Cart</p>
           <button
             type='button'
-            onClick={() => setThemeSettings(false)}
             style={{
               color: 'rgb(153,171,180)',
               borderRadius: '50%'
             }}
+            onClick={handleClick}
             className='text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray'>
             <MdOutlineCancel />
           </button>
