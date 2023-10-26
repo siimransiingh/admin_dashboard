@@ -57,12 +57,14 @@ const Cart = () => {
           </div>
         </div>
         <div className="mt-5">
+      
           <Button
             color="white"
             bgColor={curretColor}
             text="Place Order"
             borderRadius="10px"
             width="full"
+            
           />
         </div>
       </div>
