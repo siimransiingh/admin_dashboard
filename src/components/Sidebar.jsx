@@ -50,7 +50,7 @@ const Sidebar = () => {
                  key={link.name}
                  onClick={handleCloseSideBar}
                  style={({ isActive }) => ({
-                   backgroundColor: isActive ? currentColor : '',
+                   backgroundColor: isActive ? 'black' : '',
                  })}
                  className={({ isActive }) => (isActive ? activeLink : normalLink)}
                >
