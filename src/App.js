@@ -8,7 +8,7 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import { useStateContext } from './contexts/ContextProvider';
 
 function App() {
-  const {currentColor,curretMode,activeMenu,themeSettings,setThemeSettings} = useStateContext();
+  const {curretColor,curretMode,activeMenu,themeSettings,setThemeSettings} = useStateContext();
   return (
     <div className={curretMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
@@ -18,7 +18,7 @@ function App() {
               <button type='button'
                 className='text-3xl p-3 hover:drop-shadow-xl text-white hover:bg-light-gray'
                 onClick={()=>setThemeSettings(true)}
-                style={{ background: 'black', borderRadius: '50%' }}>
+                style={{ background: curretColor , borderRadius: '50%' }}>
                 <FiSettings />
               </button>
             </TooltipComponent>

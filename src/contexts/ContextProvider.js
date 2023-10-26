@@ -15,6 +15,7 @@ export const ContextProvider = ({ children }) => {
     const [curretColor, setcurretColor] = useState('#03C9D7')
     const [curretMode, setcurretMode] = useState('Light')
     const [themeSettings, setThemeSettings] = useState(false)
+    const [cartClose, setcartClose] = useState(false)
     
     const setMode = (e) => {
         setcurretMode(e.target.value)
@@ -46,7 +47,7 @@ export const ContextProvider = ({ children }) => {
             curretColor,curretMode
             ,setcurretColor,setcurretMode,
             themeSettings, setThemeSettings,
-            setColor,setMode
+            setColor,setMode,cartClose, setcartClose
             }}>
             {children}
         </StateContext.Provider>

@@ -560,11 +560,12 @@ export const links = [
 
 export const cartData = [
   {
-    image:
+    image: 
       product5,
     name: 'butterscotch ice-cream',
     category: 'Milk product',
     price: '$250',
+    quantity:"1"
   },
   {
     image:
@@ -572,6 +573,7 @@ export const cartData = [
     name: 'Supreme fresh tomato',
     category: 'Vegetable Item',
     price: '$450',
+    quantity:"1"
   },
   {
     image:
@@ -579,6 +581,7 @@ export const cartData = [
     name: 'Red color candy',
     category: 'Food Item',
     price: '$190',
+    quantity:"1"
   },
 ];
 
