@@ -7,7 +7,7 @@ import { cartData } from '../data/dummy';
 import { Button } from '.';
 
 const Cart = () => {
-  const { handleClick,curretColor,setThemeSettings } = useStateContext();
+  const { handleClick,curretColor } = useStateContext();
 
   return (
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 ">

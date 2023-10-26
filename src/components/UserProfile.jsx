@@ -7,7 +7,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
 
 const UserProfile = () => {
-  const { curretColor, handleClick } = useStateContext();
+  const { curretColor,setisClicked, handleClick } = useStateContext();
 
   return (
     <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
@@ -55,7 +55,7 @@ const UserProfile = () => {
         ))}
       </div>
       <div className="mt-5">
-        <Button
+      <Button
           color="white"
           bgColor={curretColor}
           text="Logout"
