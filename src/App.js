@@ -8,16 +8,17 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 import { useStateContext } from './contexts/ContextProvider';
 
 function App() {
-  const {activeMenu} = useStateContext();
+  const {currentColor,curretMode,activeMenu,themeSettings,setThemeSettings} = useStateContext();
   return (
-    <div>
+    <div className={curretMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
             <TooltipComponent content='Settings' position='Top'>
               <button type='button'
                 className='text-3xl p-3 hover:drop-shadow-xl text-white hover:bg-light-gray'
-                style={{ background: 'blue', borderRadius: '50%' }}>
+                onClick={()=>setThemeSettings(true)}
+                style={{ background: 'black', borderRadius: '50%' }}>
                 <FiSettings />
               </button>
             </TooltipComponent>
@@ -32,12 +33,17 @@ function App() {
             </div>
           )}
           <div className={
-            `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`
+            `dark:bg-main-dark-bg bg-main-bg min-h-screen w-full 
+            ${activeMenu 
+              ? 'md:ml-72'
+               : 'flex-2'}`
           }>
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
               <Navbar />
             </div>
           <div>
+            {themeSettings && <ThemeSettings/>}
+
             <Routes>
               {/* Dashboard */}
               <Route path='/' element={<Ecommerce />} />
